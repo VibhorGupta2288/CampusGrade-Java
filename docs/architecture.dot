@@ -1,0 +1,22 @@
+digraph G {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fillcolor="#EAF2FF", fontname="Helvetica"];
+  edge [fontname="Helvetica"];
+  User [label="Student / Evaluator\nCommand-line input"];
+  Main [label="Main\nCLI Orchestrator"];
+  Academic [label="AcademicService\nBusiness Rules"];
+  Analytics [label="AnalyticsService\nGrades / GPA / Reports"];
+  Repo [label="StudentRepository\nIn-memory collection"];
+  Store [label="FileDataStore\nPersistence"];
+  Models [label="Model layer\nStudent | Course | Assessment | GradeRecord"];
+  Files [shape=cylinder, label="data/*.csv"];
+  User -> Main;
+  Main -> Academic;
+  Main -> Analytics;
+  Academic -> Repo;
+  Academic -> Models;
+  Analytics -> Models;
+  Main -> Store;
+  Store -> Files;
+  Academic -> Store [style=dashed, label="save/load orchestration"];
+}

@@ -1,0 +1,19 @@
+digraph G {
+  rankdir=TB;
+  graph [label="Sequence: View Student Performance Report", labelloc=t, fontsize=18];
+  node [shape=box, style="rounded,filled", fillcolor="#F3F3F3", fontname="Helvetica"];
+  User [label="Evaluator"];
+  Main [label="Main"];
+  Academic [label="AcademicService"];
+  Analytics [label="AnalyticsService"];
+  Models [label="GradeRecord / Assessment"];
+  User -> Main [label="choose 6 + student ID"];
+  Main -> Academic [label="findStudent() / getStudentAssessments()"];
+  Academic -> Models [label="calculate course percentages"];
+  Main -> Analytics [label="gradeCard() / calculateGpa()"];
+  Analytics -> Academic [label="coursePercentage()"];
+  Analytics -> Models [label="create GradeRecord"];
+  Models -> Analytics [label="grade + points"];
+  Analytics -> Main [label="report data"];
+  Main -> User [label="print course grades + GPA"];
+}

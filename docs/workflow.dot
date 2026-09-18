@@ -1,0 +1,33 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#EEF7EE", fontname="Helvetica"];
+  Start [shape=circle, label="Start"];
+  Menu [label="Display CLI menu"];
+  Select [shape=diamond, label="Choose operation"];
+  Student [label="Manage students"];
+  Course [label="Manage courses"];
+  Assess [label="Record assessment"];
+  Report [label="Generate performance report"];
+  Summary [label="Generate course summary"];
+  Persist [label="Save / reload CSV data"];
+  Validate [shape=diamond, label="Valid input?"];
+  Error [label="Show error and return to menu"];
+  End [shape=doublecircle, label="Exit"];
+  Start -> Menu -> Select;
+  Select -> Student;
+  Select -> Course;
+  Select -> Assess;
+  Select -> Report;
+  Select -> Summary;
+  Select -> Persist;
+  Select -> End;
+  Student -> Validate;
+  Course -> Validate;
+  Assess -> Validate;
+  Report -> Menu;
+  Summary -> Menu;
+  Persist -> Menu;
+  Validate -> Menu [label="yes"];
+  Validate -> Error [label="no"];
+  Error -> Menu;
+}

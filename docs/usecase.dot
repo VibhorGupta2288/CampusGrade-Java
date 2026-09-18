@@ -1,0 +1,20 @@
+digraph G {
+  rankdir=LR;
+  graph [label="CampusGrade Use Cases", labelloc=t, fontsize=18];
+  node [fontname="Helvetica"];
+  actor [shape=plaintext, label="Student / Evaluator"];
+  boundary [shape=box, style="rounded", label="CampusGrade CLI"];
+  addS [shape=ellipse, label="Add / list students"];
+  addC [shape=ellipse, label="Add / list courses"];
+  addA [shape=ellipse, label="Record assessment"];
+  report [shape=ellipse, label="View student report"];
+  summary [shape=ellipse, label="View course summary"];
+  data [shape=ellipse, label="Save / reload data"];
+  actor -> boundary [style=dashed, arrowhead=none];
+  boundary -> addS;
+  boundary -> addC;
+  boundary -> addA;
+  boundary -> report;
+  boundary -> summary;
+  boundary -> data;
+}

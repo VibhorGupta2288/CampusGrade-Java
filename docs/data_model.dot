@@ -1,0 +1,9 @@
+digraph G {
+  rankdir=LR;
+  node [shape=record, style="rounded,filled", fillcolor="#F4ECFF", fontname="Helvetica"];
+  Student [label="{Student|id (PK-like)|name|email|program}"];
+  Course [label="{Course|code (PK-like)|title|credits}"];
+  Assessment [label="{Assessment|studentId|courseCode|name|score|maxScore|weight}"];
+  Student -> Assessment [label="1 to many"];
+  Course -> Assessment [label="1 to many"];
+}

@@ -1,0 +1,22 @@
+digraph G {
+  rankdir=LR;
+  graph [label="Simplified Class / Component Diagram", labelloc=t, fontsize=18];
+  node [shape=record, style="rounded,filled", fillcolor="#FFF7E6", fontname="Helvetica", fontsize=9];
+  Student [label="{Student|id|name|email|program}"];
+  Course [label="{Course|code|title|credits}"];
+  Assessment [label="{Assessment|studentId|courseCode|score|maxScore|weight|percentage()}"];
+  Grade [label="{GradeRecord|courseCode|percentage|letterGrade|gradePoint}"];
+  StudentRepo [label="{StudentRepository|add()|find()|findAll()|replaceAll()}"];
+  Academic [label="{AcademicService|addStudent()|addCourse()|addAssessment()|coursePercentage()}"];
+  Analytics [label="{AnalyticsService|calculateGpa()|gradeCard()|classAverage()}"];
+  Store [label="{FileDataStore|save()|loadStudents()|loadCourses()|loadAssessments()}"];
+  Academic -> StudentRepo;
+  Academic -> Student;
+  Academic -> Course;
+  Academic -> Assessment;
+  Analytics -> Academic;
+  Analytics -> Grade;
+  Store -> Student;
+  Store -> Course;
+  Store -> Assessment;
+}

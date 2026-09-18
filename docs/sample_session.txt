@@ -1,0 +1,88 @@
+Data loaded from data/*.csv
+
+=== CampusGrade - Java Academic Performance Manager ===
+
+1. Add student
+2. List students
+3. Add course
+4. List courses
+5. Record assessment
+6. Student performance report
+7. Course summary
+8. What-if target analysis
+9. Save data
+10. Reload data
+0. Exit
+Choose: 
+Students
+ID         Name                     Email                          Program
+S1001      Aarav Mehta              aarav@example.com              B.Tech CSE              
+S1002      Diya Sharma              diya@example.com               B.Tech CSE              
+S1003      Rohan Singh              rohan@example.com              B.Tech CSE              
+
+1. Add student
+2. List students
+3. Add course
+4. List courses
+5. Record assessment
+6. Student performance report
+7. Course summary
+8. What-if target analysis
+9. Save data
+10. Reload data
+0. Exit
+Choose: Student ID: 
+Student: Aarav Mehta (S1001)
+Program: B.Tech CSE
+------------------------------------------------------------
+Course     Percentage     Grade     Grade Point
+JAVA101         87.20%        A            9.0
+DSA201          79.00%        B            8.0
+GPA: 8.50 / 10.00
+
+1. Add student
+2. List students
+3. Add course
+4. List courses
+5. Record assessment
+6. Student performance report
+7. Course summary
+8. What-if target analysis
+9. Save data
+10. Reload data
+0. Exit
+Choose: Student ID: Course code: Target final percentage: Current weighted percentage: 79.00%
+Required average on remaining weight: 84.00%
+The target is reachable if the remaining assessments average at least the value above.
+
+1. Add student
+2. List students
+3. Add course
+4. List courses
+5. Record assessment
+6. Student performance report
+7. Course summary
+8. What-if target analysis
+9. Save data
+10. Reload data
+0. Exit
+Choose: Course code: 
+Course: JAVA101 - Programming in Java
+Class average: 78.20%
+Student scores:
+S1001      Aarav Mehta              87.20%
+S1002      Diya Sharma              77.40%
+S1003      Rohan Singh              70.00%
+
+1. Add student
+2. List students
+3. Add course
+4. List courses
+5. Record assessment
+6. Student performance report
+7. Course summary
+8. What-if target analysis
+9. Save data
+10. Reload data
+0. Exit
+Choose: Goodbye.
